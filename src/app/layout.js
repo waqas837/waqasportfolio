@@ -1,14 +1,9 @@
 import Header from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./globals.css";
-import Script from "next/script";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
-  title:
-    "Affordable Websites | Quality Web Development at Budget-Friendly Prices",
-  description:
-    "Get professional, affordable websites designed to grow your business. Fast, responsive, and tailored web development solutions that fit your budget",
+  title: "Muhammad Waqas Portfolio",
 };
 
 export default async function RootLayout({ children, params: { lang } }) {
@@ -53,26 +48,6 @@ export default async function RootLayout({ children, params: { lang } }) {
         <Header />
         <main>{children}</main>
         <Footer />
-
-        {/* Google Analytics Setup */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-0CZXLNN8LK`}
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-0CZXLNN8LK');
-            `,
-          }}
-        />
-        {/* Modern GA4 integration */}
-        <GoogleAnalytics gaId="G-0CZXLNN8LK" />
       </body>
     </html>
   );
