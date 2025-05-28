@@ -3,8 +3,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { sendContactEmail } from "@/lib/sendEmail";
- 
+  
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -25,30 +24,29 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
-    setSubmitError(null);
+    alert("Please contact on email or phone number Provided. Thanks!")
 
-    try {
-      const formDataObj = new FormData();
-      formDataObj.append("name", formData.name);
-      formDataObj.append("email", formData.email);
-      formDataObj.append("subject", formData.subject);
-      formDataObj.append("message", formData.message);
+    // try {
+    //   const formDataObj = new FormData();
+    //   formDataObj.append("name", formData.name);
+    //   formDataObj.append("email", formData.email);
+    //   formDataObj.append("subject", formData.subject);
+    //   formDataObj.append("message", formData.message);
 
-      const result = await sendContactEmail(formDataObj);
+    //   // const result = await sendContactEmail(formDataObj);
 
-      if (result.error) {
-        throw new Error(result.error);
-      }
+    //   if (result.error) {
+    //     throw new Error(result.error);
+    //   }
 
-      setIsSubmitted(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setIsSubmitted(false), 3000);
-    } catch (error) {
-      setSubmitError(error.message);
-    } finally {
-      setIsLoading(false);
-    }
+    //   setIsSubmitted(true);
+    //   setFormData({ name: "", email: "", subject: "", message: "" });
+    //   setTimeout(() => setIsSubmitted(false), 3000);
+    // } catch (error) {
+    //   setSubmitError(error.message);
+    // } finally {
+    //   setIsLoading(false);
+    // }
   };
 
   const contactItems = [
