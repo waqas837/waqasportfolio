@@ -42,6 +42,10 @@ const TechStack = () => {
 
     // DevOps
     {
+      name: "Docker",
+      icon: <Server size={40} className="text-blue-500" />,
+    },
+    {
       name: "Nginx",
       icon: <Server size={40} className="text-gray-400" />, // placeholder icon
     },
