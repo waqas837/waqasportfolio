@@ -133,7 +133,7 @@ const Projects = () => {
           mouseX.set(e.clientX - bounds.left);
           mouseY.set(e.clientY - bounds.top);
         }}
-        className="relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-900/50 backdrop-blur-sm shadow-2xl"
+        className="relative overflow-hidden rounded-2xl border border-gray-700 bg-gray-800 backdrop-blur-sm shadow-2xl"
       >
         {children}
         <motion.div
@@ -149,7 +149,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-32 px-6 lg:px-20 relative overflow-hidden"
+      className="py-16 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-20 relative overflow-hidden bg-gray-900"
     >
       {/* Background animation */}
       <motion.div
@@ -190,23 +190,12 @@ const Projects = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="mb-20"
         >
-          <h2 className="section-title">Projects</h2>
-          <motion.div
-            className="mt-4 h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent mx-auto"
-            initial={{ scaleX: 0, originX: 0.5 }}
-            whileInView={{ scaleX: 1 }}
-            transition={{
-              duration: 1.2,
-              delay: 0.3,
-              ease: [0.16, 0.77, 0.47, 0.97],
-            }}
-            viewport={{ once: true }}
-            style={{ width: "120px" }}
-          />
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-4">PORTFOLIO</h2>
+          <p className="text-green-400 text-center mb-8 sm:mb-12 lg:mb-16">MY Cases</p>
         </motion.div>
 
         {/* Featured Project Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -247,7 +236,7 @@ const Projects = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <motion.span
                         key={techIndex}
-                        className="text-xs font-mono bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full border border-gray-700"
+                        className="text-xs font-mono bg-gray-700 text-gray-300 px-3 py-1.5 rounded-full border border-gray-600"
                       >
                         {tech}
                       </motion.span>
@@ -281,7 +270,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-xl font-semibold text-white mb-4 text-center">
+          <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
             All Projects
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -291,7 +280,7 @@ const Projects = () => {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-indigo-400 hover:text-white border border-gray-700 rounded-md p-4 bg-gray-800/30 backdrop-blur transition-all hover:border-indigo-500"
+                className="text-sm text-green-400 hover:text-green-300 border border-gray-600 rounded-md p-4 bg-gray-700/30 backdrop-blur transition-all hover:border-green-400"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
@@ -312,15 +301,15 @@ const Projects = () => {
           transition={{ delay: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.p className="text-gray-400 text-lg mb-6">
+          <motion.p className="text-gray-600 text-lg mb-6">
             Interested in seeing more of My work?
           </motion.p>
           <motion.a
             href="#contact"
-            className="inline-flex items-center px-8 py-3 border border-gray-700 text-gray-300 rounded-lg hover:border-indigo-500 hover:text-white group transition-all"
+            className="inline-flex items-center px-8 py-3 border border-green-400 text-green-400 rounded-lg hover:border-green-500 hover:text-green-500 group transition-all"
             whileHover={{
               y: -3,
-              backgroundColor: "rgba(99, 102, 241, 0.05)",
+              backgroundColor: "rgba(34, 197, 94, 0.1)",
             }}
           >
             <span>Let's discuss your project</span>

@@ -74,17 +74,12 @@ const TechStack = () => {
   return (
     <section
       id="skills"
-      className="py-28 px-6 lg:px-20 relative overflow-hidden"
+      className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-20 relative overflow-hidden bg-gray-900"
     >
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/3 left-1/4 w-64 h-64 rounded-full bg-indigo-600/10 blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-purple-600/10 blur-3xl"></div>
-      </div>
 
       <div className="container mx-auto">
         <motion.h2
-          className="section-title "
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 sm:mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -94,7 +89,7 @@ const TechStack = () => {
         </motion.h2>
 
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mt-16"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 lg:mt-16"
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -107,7 +102,7 @@ const TechStack = () => {
               className="group relative"
               whileHover={{ y: -5 }}
             >
-              <div className="flex flex-col items-center p-6 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-indigo-500/30 transition-all duration-300 group-hover:bg-gray-900/70 backdrop-blur-sm h-full">
+              <div className="flex flex-col items-center p-4 sm:p-6 bg-gray-800 rounded-xl border border-gray-700 hover:border-green-400 transition-all duration-300 group-hover:bg-gray-700 h-full shadow-lg">
                 <motion.div
                   className="transition-transform duration-500 group-hover:scale-110"
                   whileHover={{ rotate: [0, -10, 10, 0] }}
@@ -115,13 +110,13 @@ const TechStack = () => {
                 >
                   {tech.icon}
                 </motion.div>
-                <span className="mt-4 text-gray-300 font-medium text-center">
+                <span className="mt-3 sm:mt-4 text-white font-medium text-center text-xs sm:text-sm">
                   {tech.name}
                 </span>
               </div>
 
               {/* Subtle glow effect on hover */}
-              <div className="absolute inset-0 rounded-xl bg-indigo-500/10 opacity-0 group-hover:opacity-100 -z-10 blur-md transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-xl bg-green-400/10 opacity-0 group-hover:opacity-100 -z-10 blur-md transition-opacity duration-300"></div>
             </motion.div>
           ))}
         </motion.div>

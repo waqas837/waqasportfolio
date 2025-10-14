@@ -59,7 +59,7 @@ export default function Contact() {
     {
       icon: <Mail size={20} />,
       title: "Email",
-      value: "waqaskhanbughlani1124@gmail.com",
+      value: "waqasdevbughlani@gmail.com",
       delay: 0.2,
     },
     {
@@ -73,14 +73,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-28 px-6 lg:px-20 relative overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(ellipse at top, rgba(39, 39, 42, 0.5), transparent), radial-gradient(ellipse at bottom, rgba(30, 58, 138, 0.2), transparent)",
-      }}
+      className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-20 relative overflow-hidden bg-gray-900"
     >
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-indigo-600/10 blur-3xl"></div>
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-purple-600/10 blur-3xl"></div>
         <div className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-purple-600/10 blur-3xl"></div>
       </div>
 
@@ -91,19 +87,13 @@ export default function Contact() {
           transition={{ duration: 0.8, ease: [0.16, 0.77, 0.47, 0.97] }}
           className="mb-16"
         >
-          <h2 className="text-4xl font-bold text-center text-white mb-4">
-            Let's Connect
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-white mb-4">
+            CONTACT
           </h2>
-          <motion.div
-            className="mt-4 h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent mx-auto"
-            initial={{ scaleX: 0, originX: 0.5 }}
-            animate={isInView ? { scaleX: 1 } : {}}
-            transition={{ duration: 1.2, delay: 0.3 }}
-            style={{ width: "120px" }}
-          />
+          <p className="text-green-400 text-center mb-8 sm:mb-12 lg:mb-16">Are You Looking For Your Business Online Presence? I am here. 😊</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -116,7 +106,7 @@ export default function Contact() {
               transition={{ delay: 0.4 }}
             >
               I am interested in{" "}
-              <span className="text-indigo-400">freelance opportunities</span> –
+              <span className="text-green-400">freelance opportunities</span> –
               especially ambitious or large projects. However, if you have other
               requests or questions, don't hesitate to reach out.
             </motion.p>
@@ -131,14 +121,14 @@ export default function Contact() {
                   transition={{ delay: item.delay, duration: 0.6 }}
                 >
                   <motion.div
-                    className="p-4 bg-gray-800 rounded-xl text-indigo-400 group-hover:bg-indigo-600/10 group-hover:text-white transition-all duration-300"
+                    className="p-4 bg-gray-800 rounded-xl text-green-400 group-hover:bg-green-400/10 group-hover:text-green-300 transition-all duration-300 shadow-lg"
                     whileHover={{ scale: 1.05 }}
                   >
                     {item.icon}
                   </motion.div>
                   <div>
                     <h4 className="text-white font-medium">{item.title}</h4>
-                    <p className="text-gray-400 group-hover:text-indigo-300 transition-colors duration-300">
+                    <p className="text-gray-300 group-hover:text-green-400 transition-colors duration-300">
                       {item.value}
                     </p>
                   </div>
@@ -185,7 +175,7 @@ export default function Contact() {
               >
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-400 mb-2"
+                  className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Your Name
                 </label>
@@ -196,7 +186,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-500 transition-all duration-300 hover:border-gray-600"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 text-white placeholder-gray-400 transition-all duration-300 hover:border-green-400 shadow-lg"
                   placeholder="Name"
                 />
               </motion.div>
@@ -208,7 +198,7 @@ export default function Contact() {
               >
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-400 mb-2"
+                  className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Your Email
                 </label>
@@ -219,7 +209,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-500 transition-all duration-300 hover:border-gray-600"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 text-white placeholder-gray-400 transition-all duration-300 hover:border-green-400 shadow-lg"
                   placeholder="your@email.com"
                 />
               </motion.div>
@@ -232,7 +222,7 @@ export default function Contact() {
             >
               <label
                 htmlFor="subject"
-                className="block text-sm font-medium text-gray-400 mb-2"
+                className="block text-sm font-medium text-gray-300 mb-2"
               >
                 Subject
               </label>
@@ -243,7 +233,7 @@ export default function Contact() {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-500 transition-all duration-300 hover:border-gray-600"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 text-white placeholder-gray-400 transition-all duration-300 hover:border-green-400 shadow-lg"
                 placeholder="Project Inquiry"
               />
             </motion.div>
@@ -255,7 +245,7 @@ export default function Contact() {
             >
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-400 mb-2"
+                className="block text-sm font-medium text-gray-300 mb-2"
               >
                 Your Message
               </label>
@@ -266,7 +256,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-500 transition-all duration-300 hover:border-gray-600 resize-none"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-white placeholder-gray-400 transition-all duration-300 hover:border-green-400 resize-none shadow-lg"
                 placeholder="Hello, I am interested in..."
               ></textarea>
             </motion.div>
@@ -279,10 +269,10 @@ export default function Contact() {
               <motion.button
                 type="submit"
                 disabled={isLoading}
-                className={`flex items-center justify-center gap-3 w-full px-6 py-4 bg-gradient-to-r from-indigo-600 to-indigo-500 text-white rounded-full font-medium transition-all duration-300 group ${
+                className={`flex items-center justify-center gap-3 w-full px-6 py-4 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full font-medium transition-all duration-300 group ${
                   isLoading
                     ? "opacity-70 cursor-not-allowed"
-                    : "hover:from-indigo-500 hover:to-indigo-400"
+                    : "hover:from-green-500 hover:to-green-400"
                 }`}
                 whileHover={!isLoading ? { y: -2, scale: 1.02 } : {}}
                 whileTap={!isLoading ? { scale: 0.98 } : {}}

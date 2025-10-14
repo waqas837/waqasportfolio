@@ -44,10 +44,22 @@ export default async function RootLayout({ children, params: { lang } }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
 
-      <body className={`bg-gray-950 text-gray-100 scroll-smooth`}>
+      <body className={`bg-gray-900 text-white scroll-smooth`}>
         <Header />
         <main>{children}</main>
         <Footer />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Preload critical resources
+              const link = document.createElement('link');
+              link.rel = 'preload';
+              link.href = '/waqas.png';
+              link.as = 'image';
+              document.head.appendChild(link);
+            `,
+          }}
+        />
       </body>
     </html>
   );

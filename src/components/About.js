@@ -42,15 +42,12 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-28 relative px-6 lg:px-20 overflow-hidden"
+      className="py-16 sm:py-20 lg:py-28 relative px-4 sm:px-6 lg:px-20 overflow-hidden bg-gray-900"
     >
-      {/* Decorative elements */}
-      <div className="absolute -right-20 -top-20 w-64 h-64 rounded-full bg-indigo-600/10 blur-3xl -z-10"></div>
-      <div className="absolute -left-20 bottom-1/4 w-72 h-72 rounded-full bg-purple-600/10 blur-3xl -z-10"></div>
 
       <div className="container mx-auto">
         <motion.h2
-          className="section-title"
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 sm:mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -59,7 +56,7 @@ const About = () => {
           About Me
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mt-8 sm:mt-12 lg:mt-16">
           <motion.div
             className="space-y-6"
             variants={containerVariants}
@@ -68,11 +65,11 @@ const About = () => {
             viewport={{ once: true, margin: "-100px" }}
           >
             <motion.p
-              className="text-gray-300 leading-relaxed"
+              className="text-gray-300 leading-relaxed text-sm sm:text-base"
               variants={itemVariants}
             >
               I am a passionate{" "}
-              <span className="text-indigo-400 font-medium">
+              <span className="text-green-400 font-medium">
                 Full Stack Developer
               </span>{" "}
               specializing in modern web applications. My journey began with a
@@ -82,11 +79,11 @@ const About = () => {
             </motion.p>
 
             <motion.p
-              className="text-gray-300 leading-relaxed"
+              className="text-gray-300 leading-relaxed text-sm sm:text-base"
               variants={itemVariants}
             >
               With expertise in both{" "}
-              <span className="text-indigo-400 font-medium">
+              <span className="text-green-400 font-medium">
                 frontend and backend{" "}
               </span>
               technologies, I am excel at solving complex business challenges
@@ -94,11 +91,11 @@ const About = () => {
             </motion.p>
 
             <motion.p
-              className="text-gray-300 leading-relaxed"
+              className="text-gray-300 leading-relaxed text-sm sm:text-base"
               variants={itemVariants}
             >
               I focuses on{" "}
-              <span className="text-indigo-400 font-medium">
+              <span className="text-green-400 font-medium">
                 exploring emerging technologies
               </span>
               , contributing to open-source projects, and sharing knowledge
@@ -108,20 +105,20 @@ const About = () => {
 
           {/* Skills Section */}
           <motion.div
-            className="bg-gradient-to-br from-gray-900/70 to-gray-900/40 p-8 rounded-2xl border border-gray-800 backdrop-blur-sm shadow-lg"
+            className="bg-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 backdrop-blur-sm shadow-lg"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
             <motion.h3
-              className="text-2xl font-semibold mb-8 text-white flex items-center"
+              className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 text-white flex items-center"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <span className="w-2 h-8 bg-gradient-to-b from-indigo-500 to-purple-500 mr-4 rounded-sm"></span>
+              <span className="w-2 h-6 sm:h-8 bg-green-400 mr-3 sm:mr-4 rounded-sm"></span>
               My Tech Stacks
             </motion.h3>
 
@@ -133,13 +130,13 @@ const About = () => {
             </div>
 
             <motion.div
-              className="mt-8 pt-6 border-t border-gray-800/50"
+              className="mt-8 pt-6 border-t border-gray-600"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
               viewport={{ once: true }}
             >
-              <p className="text-sm text-gray-400 italic">
+              <p className="text-sm text-gray-300 italic">
                 "Continuous innovation and mastering new technologies drives me
                 to the professional excellence."
               </p>

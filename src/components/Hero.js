@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import TypewriterEffect from "./TypewriterEffect";
 import SocialLinks from "./SocialLinks";
 import Image from "next/image";
 
@@ -11,48 +10,32 @@ const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 10, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: "easeOut",
       },
     },
   };
 
   const imageVariants = {
-    hidden: { scale: 0.9, opacity: 0 },
+    hidden: { scale: 0.95, opacity: 0 },
     visible: {
       scale: 1,
       opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.4,
         ease: "easeOut",
-      },
-    },
-  };
-
-  const glowVariants = {
-    initial: {
-      opacity: 0.3,
-      scale: 0.95,
-    },
-    animate: {
-      opacity: [0.3, 0.4, 0.3],
-      scale: [0.95, 1, 0.95],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut",
       },
     },
   };
@@ -60,128 +43,89 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-28 flex items-center px-6 lg:px-20 overflow-hidden"
+      className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-20 overflow-hidden bg-gray-900 pt-32"
     >
-      {/* Subtle animated background elements */}
-      <motion.div
-        className="absolute inset-0 -z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-      >
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-indigo-600/10 blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 rounded-full bg-purple-600/10 blur-3xl"></div>
-      </motion.div>
-
-      <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        {/* Left Section - Text Content */}
         <motion.div
-          className="lg:w-1/2 space-y-6"
+          className="w-full lg:w-1/2 space-y-6 lg:space-y-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.h2
-            className="text-indigo-400 font-medium"
-            variants={itemVariants}
-          >
-            Hello, I am
-          </motion.h2>
-
-          <motion.h1
-            className="text-5xl lg:text-7xl font-bold text-white mb-4"
-            variants={itemVariants}
-          >
-            Muhammad waqas
-          </motion.h1>
-
-          <motion.div variants={itemVariants}>
-            <TypewriterEffect />
+          {/* Main Heading */}
+          <motion.div variants={itemVariants} className="space-y-3 lg:space-y-4">
+            <h2 className="text-white text-base sm:text-lg">
+              HELLO, I AM
+            </h2>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
+              MUHAMMAD WAQAS
+            </h1>
+            <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-green-400">
+              I AM Full Stack Developer
+            </h2>
           </motion.div>
 
+          {/* Description */}
           <motion.p
-            className="text-gray-300 leading-relaxed"
+            className="text-gray-300 leading-relaxed text-sm sm:text-base lg:text-lg max-w-lg"
             variants={itemVariants}
           >
-            I craft responsive websites and web applications that deliver
-            exceptional user experiences. Specializing in both{" "}
-            <span className="text-indigo-400 font-medium">
-              frontend and backend{" "}
-            </span>
-            technologies with{" "}
-            <span className="text-indigo-400 font-medium">5+ years</span> of
-            collective expertise.
+            From Pakistan. I'm a Full Stack Web developer who is passionate about making error-free websites. I am also good at React and Node.js. I love to talk with you about your unique idea.
           </motion.p>
 
-          <motion.div className="flex gap-4 mt-8" variants={itemVariants}>
-            <motion.a
-              href="#projects"
-              className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View My Work
-            </motion.a>
-            <motion.a
-              href="#contact"
-              className="px-8 py-3 border border-indigo-600 text-indigo-400 hover:bg-indigo-600/10 rounded-full font-medium transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Contact Me
-            </motion.a>
+          {/* CTA Button */}
+          <motion.div variants={itemVariants}>
+            <button className="bg-green-400 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-medium hover:bg-green-500 transition-colors duration-300 text-sm sm:text-base">
+              Contact me
+            </button>
           </motion.div>
-
-          {/* <motion.div className="mt-8" variants={itemVariants}>
-            <SocialLinks />
-          </motion.div> */}
         </motion.div>
 
+        {/* Right Section - Image and Stats */}
         <motion.div
-          className="w-full lg:w-2/5 relative aspect-square max-w-[180px] sm:max-w-[220px] md:max-w-[250px] lg:max-w-[350px] xl:max-w-[400px] mx-auto"
+          className="w-full lg:w-1/2 relative flex flex-col items-center lg:items-end mt-8 lg:mt-0"
           variants={imageVariants}
           initial="hidden"
           animate="visible"
         >
-          {/* Hide glow on small screens */}
-          <motion.div
-            className="hidden sm:block absolute inset-0 bg-gradient-to-br from-indigo-600/30 to-purple-600/20 rounded-full blur-3xl"
-            variants={glowVariants}
-            initial="initial"
-            animate="animate"
-          />
-          <div className="relative w-full h-full flex items-center justify-center">
-            {/* Enhanced professional gradient background with smoother animation */}
-            <div
-              className="absolute -z-10 w-96 h-96 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-full blur-3xl opacity-60 animate-pulse"
-              style={{ animationDuration: "8s" }}
-            />
-
-            {/* Secondary gradient with more refined animation */}
-            <div
-              className="absolute -z-10 w-80 h-80 top-10 left-10 bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 rounded-full blur-2xl opacity-40"
-              style={{
-                animation: "ping 5s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-              }}
-            />
-
-            {/* Tertiary subtle accent bubble */}
-            <div className="absolute -z-10 w-48 h-48 bottom-10 right-10 bg-gradient-to-tr from-sky-400 to-blue-500 rounded-full blur-xl opacity-30" />
-
-            {/* Image container with professional styling */}
-            <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-[0_0_25px_rgba(59,130,246,0.4)]">
-              {/* Border glow effect for elegance */}
-              <div className="absolute inset-0 rounded-2xl border border-white/20 z-10"></div>
-
-              {/* Your hero image */}
-              <img
-                src="/waqas.png"
-                alt="Muhammad waqas"
-                className="w-full h-full object-cover"
-              />
-
-              {/* Subtle overlay for depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
+          {/* Image with green circle background */}
+          <div className="relative mb-6 lg:mb-8">
+            <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 bg-green-400 rounded-full flex items-center justify-center p-2">
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <Image
+                  src="/waqas.png"
+                  alt="Muhammad Waqas"
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-cover"
+                  priority
+                  quality={85}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                />
+              </div>
             </div>
+          </div>
+
+          {/* Stats Cards */}
+          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+            <motion.div
+              className="bg-gray-800 border border-green-400 rounded-lg p-4 sm:p-6 text-center flex-1"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="text-2xl sm:text-3xl font-bold text-white">5+</div>
+              <div className="text-xs sm:text-sm text-gray-300">years of Experience</div>
+            </motion.div>
+            <motion.div
+              className="bg-gray-800 border border-green-400 rounded-lg p-4 sm:p-6 text-center flex-1"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="text-2xl sm:text-3xl font-bold text-white">50+</div>
+              <div className="text-xs sm:text-sm text-gray-300">Completed Projects</div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
