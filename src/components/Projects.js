@@ -11,6 +11,14 @@ import { useEffect } from "react";
 const Projects = () => {
   const projects = [
     {
+      title: "Qhantom Corporation - Web3 Multidimensional Platform",
+      description:
+        "A cutting-edge full-stack Web3 application featuring multidimensional exploration, quantum artifacts collection, and interactive dimensional experiences with AI integration and blockchain technology.",
+      image: "/qhantomcorp.jpg",
+      technologies: ["Next.js", "Web3", "Blockchain", "AI Integration", "Database", "Node.js"],
+      demoLink: "https://api.furnitrack.com/",
+    },
+    {
       title: "E-Commerce Platform",
       description:
         "A full-stack e-commerce platform with payment integration, user authentication, and admin dashboard.",
