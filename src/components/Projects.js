@@ -64,7 +64,7 @@ const Projects = () => {
         "Professional trucking dispatch services that keep your freight moving efficiently and on time.",
       image: "/pl.jpg",
       technologies: ["Next.js", "Strapi", "OpenAI API", "Socket.IO"],
-      demoLink: "https://preciselogistics.net/",
+      demoLink: "https://truckdispatch-logistics.vercel.app/",
     },
     {
       title: "The Captcha Solver AI",
@@ -91,7 +91,7 @@ const Projects = () => {
   const moreProjectLinks = [
     "https://drawsketch.co/",
     "https://captchasolver.ai/",
-    "https://preciselogistics.net",
+    "https://truckdispatch-logistics.vercel.app/",
     "https://eezup.com/",
     "https://themartinfirmpa.vercel.app/",
     "https://multivender.netlify.app/",

@@ -115,7 +115,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="text-2xl sm:text-3xl font-bold text-white">5+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white">6</div>
               <div className="text-xs sm:text-sm text-gray-300">years of Experience</div>
             </motion.div>
             <motion.div
