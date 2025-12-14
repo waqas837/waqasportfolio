@@ -62,7 +62,7 @@ const Hero = () => {
               MUHAMMAD WAQAS
             </h1>
             <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-green-400">
-              I AM Full Stack Developer
+              Next.js Node.js Expert
             </h2>
           </motion.div>
 
