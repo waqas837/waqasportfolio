@@ -11,12 +11,44 @@ import { useEffect } from "react";
 const Projects = () => {
   const projects = [
     {
-      title: "Qhantom Corporation - Web3 Multidimensional Platform",
+      title: "AI Expert Network - Marketplace Platform",
       description:
-        "A cutting-edge full-stack Web3 application featuring multidimensional exploration, quantum artifacts collection, and interactive dimensional experiences with AI integration and blockchain technology.",
-      image: "/qhantomcorp.jpg",
-      technologies: ["Next.js", "Web3", "Blockchain", "AI Integration", "Database", "Node.js"],
-      demoLink: "https://api.furnitrack.com/",
+        "A specialized marketplace platform connecting AI developers with clients. Full-featured marketplace similar to Upwork, with expert vetting, client hiring, payment processing, and ongoing training programs.",
+      image: "/aiexpertnetwork.png",
+      technologies: ["Next.js", "React.js", "Marketplace", "Payment Integration", "AI Specialized"],
+      demoLink: "https://www.aiexpertnetwork.com/",
+    },
+    {
+      title: "Qhantom Corporation",
+      description:
+        "A multidisciplinary research and creation studio platform exploring technology, media, and design. Features fashion lab, tech products, tokenomics, gaming (ARKADE), AI assistant (Q•AI), music lab, and immersive storytelling experiences.",
+      image: "/qhantom.png",
+      technologies: ["Next.js", "React.js", "Tokenomics", "AI Integration", "Gaming Platform"],
+      demoLink: "https://qhantom.com/",
+    },
+    {
+      title: "MAQUINARIA RD - Heavy Equipment Marketplace",
+      description:
+        "The official marketplace for machinery in the Dominican Republic. A comprehensive platform for buying, selling, and renting heavy equipment with verified listings, inspection services, operator profiles, and financing options.",
+      image: "/MAQUINARIA RD.png",
+      technologies: ["Next.js", "React.js", "Marketplace", "E-commerce", "Equipment Rental"],
+      demoLink: "https://maquinaria-rd-first-look.vercel.app/",
+    },
+    {
+      title: "Luxora Ecommerce",
+      description:
+        "A modern e-commerce platform featuring product listings, shopping cart functionality, and user authentication. Clean design with featured products, sale promotions, and seamless shopping experience.",
+      image: "/luxora.png",
+      technologies: ["Vue.js", "E-commerce", "Shopping Cart", "Product Management"],
+      demoLink: "https://luxora-ecommerc-vue-js.vercel.app/",
+    },
+    {
+      title: "ERP Platform",
+      description:
+        "A full-Fledged Furniture ERP platform with payment subscription for customers, user authentication, and admin dashboard.",
+      image: "/furnitrack.jpg",
+      technologies: ["React.js", "Node.js", "MongoDB", "Stripe"],
+      demoLink: "https://furnitrack.vercel.app/",
     },
     {
       title: "E-Commerce Platform",
@@ -25,22 +57,6 @@ const Projects = () => {
       image: "/ecom construction.jpg",
       technologies: ["React.js", "Node.js", "MongoDB", "Stripe"],
       demoLink: "https://hstconstruction.netlify.app/",
-    },
-    {
-      title: "ERP Platform",
-      description:
-        "A full-Fledged Furniture ERP platform with payment subscription for customers, user authentication, and admin dashboard.",
-      image: "/furnitrack.jpg",
-      technologies: ["React.js", "Node.js", "MongoDB", "Stripe"],
-      demoLink: "https://furnitrack.com/",
-    },
-    {
-      title: "Mindie - Journal Web App",
-      description:
-        "A journal writer webiste with different free and paid templates.",
-      image: "/mindie.jpeg",
-      technologies: ["Next.js", "Tailwind CSS", "Supabase"],
-      demoLink: "https://mindie1.vercel.app/",
     },
     {
       title: "Q && A Quiz Plateform",
@@ -57,14 +73,6 @@ const Projects = () => {
       image: "/lawfirm.jpg",
       technologies: ["Next.js", "Strapi", "OpenAI API", "Socket.IO"],
       demoLink: "https://themartinfirmpa.vercel.app/",
-    },
-    {
-      title: "The preciselogistics - Trucking Dispatch Company Landing page",
-      description:
-        "Professional trucking dispatch services that keep your freight moving efficiently and on time.",
-      image: "/pl.jpg",
-      technologies: ["Next.js", "Strapi", "OpenAI API", "Socket.IO"],
-      demoLink: "https://truckdispatch-logistics.vercel.app/",
     },
     {
       title: "The Captcha Solver AI",
@@ -86,16 +94,36 @@ const Projects = () => {
       technologies: ["Next.js", "Node.js", "MySQL"],
       demoLink: "https://ecommerce-mu-lake-16.vercel.app/",
     },
+    {
+      title: "ParseDaddy - AI Document Processing",
+      description:
+        "AI-powered document processing platform that transforms messy documents into clean structured data. Upload invoices, contracts, receipts, and forms to get perfectly formatted JSON, CSV, or Excel files in seconds.",
+      image: "/parsedaddy.png",
+      technologies: ["Next.js", "AI/ML", "Document Processing", "API Integration"],
+      demoLink: "https://parsedaddy.com/",
+    },
+    {
+      title: "SimplyProcure - Smart Procurement Platform",
+      description:
+        "Smart procurement platform that streamlines procurement processes, saves time and gives complete control over spend. Features smart RFQ creation, real-time analytics, and enterprise security.",
+      image: "/rfqsoftware.png",
+      technologies: ["Next.js", "React.js", "Real-time Analytics", "Enterprise Solutions"],
+      demoLink: "https://rfq-software.vercel.app/",
+    },
   ];
 
   const moreProjectLinks = [
+    "https://www.aiexpertnetwork.com/",
+    "https://qhantom.com/",
+    "https://maquinaria-rd-first-look.vercel.app/",
+    "https://luxora-ecommerc-vue-js.vercel.app/",
+    "https://parsedaddy.com/",
+    "https://rfq-software.vercel.app/",
     "https://drawsketch.co/",
     "https://captchasolver.ai/",
-    "https://truckdispatch-logistics.vercel.app/",
     "https://eezup.com/",
     "https://themartinfirmpa.vercel.app/",
     "https://multivender.netlify.app/",
-    "https://themartinfirmpa.vercel.app/",
     "https://ecommerce-mu-lake-16.vercel.app/",
     "https://tamam-game-project.vercel.app/",
     "https://dingi-io-frontend.vercel.app/",
@@ -108,7 +136,6 @@ const Projects = () => {
     "https://spectrumsite.netlify.app/",
     "https://guardaround.netlify.app/",
     "https://vital-plasma.vercel.app/",
-    ,
   ];
 
   const CardWrapper = ({ children }) => {
@@ -141,7 +168,7 @@ const Projects = () => {
           mouseX.set(e.clientX - bounds.left);
           mouseY.set(e.clientY - bounds.top);
         }}
-        className="relative overflow-hidden rounded-2xl border border-gray-700 bg-gray-800 backdrop-blur-sm shadow-2xl"
+        className="relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-50/50 backdrop-blur-sm shadow-2xl"
       >
         {children}
         <motion.div
@@ -157,7 +184,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-16 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-20 relative overflow-hidden bg-gray-900"
+      className="py-32 px-6 lg:px-20 relative overflow-hidden bg-gray-50"
     >
       {/* Background animation */}
       <motion.div
@@ -196,14 +223,41 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 0.77, 0.47, 0.97] }}
           viewport={{ once: true, margin: "-100px" }}
-          className="mb-20"
+          className="mb-20 text-center"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-4">PORTFOLIO</h2>
-          <p className="text-green-400 text-center mb-8 sm:mb-12 lg:mb-16">MY Cases</p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-indigo-400 font-semibold uppercase tracking-wider text-sm mb-4"
+          >
+            My Work
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-4xl sm:text-5xl font-extrabold mb-4"
+          >
+            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Projects</span>
+          </motion.h2>
+          <motion.div
+            className="h-1 w-24 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{
+              duration: 1.2,
+              delay: 0.3,
+              ease: [0.16, 0.77, 0.47, 0.97],
+            }}
+            viewport={{ once: true }}
+          />
         </motion.div>
 
         {/* Featured Project Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -230,21 +284,21 @@ const Projects = () => {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <motion.div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent opacity-90" />
+                  <motion.div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent opacity-90" />
                 </motion.div>
 
                 <div className="p-8">
-                  <motion.h3 className="text-2xl font-bold text-white mb-3">
+                  <motion.h3 className="text-2xl font-bold text-gray-900 mb-3">
                     {project.title}
                   </motion.h3>
-                  <motion.p className="text-gray-300 mb-6 leading-relaxed">
+                  <motion.p className="text-gray-700 mb-6 leading-relaxed">
                     {project.description}
                   </motion.p>
                   <div className="flex flex-wrap gap-2 mb-8">
                     {project.technologies.map((tech, techIndex) => (
                       <motion.span
                         key={techIndex}
-                        className="text-xs font-mono bg-gray-700 text-gray-300 px-3 py-1.5 rounded-full border border-gray-600"
+                        className="text-xs font-mono bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full border border-gray-200"
                       >
                         {tech}
                       </motion.span>
@@ -253,6 +307,8 @@ const Projects = () => {
                   <div className="flex">
                     <motion.a
                       href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="relative overflow-hidden px-5 py-2 rounded-full text-sm font-medium"
                       whileHover={{ y: -2 }}
                       whileTap={{ scale: 0.95 }}
@@ -288,7 +344,7 @@ const Projects = () => {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-green-400 hover:text-green-300 border border-gray-600 rounded-md p-4 bg-gray-700/30 backdrop-blur transition-all hover:border-green-400"
+                className="text-sm text-indigo-600 hover:text-indigo-700 border border-gray-300 rounded-md p-4 bg-white transition-all hover:border-indigo-500 hover:bg-indigo-50"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
@@ -310,14 +366,14 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <motion.p className="text-gray-600 text-lg mb-6">
-            Interested in seeing more of My work?
+            Interested in seeing more of my work?
           </motion.p>
           <motion.a
             href="#contact"
-            className="inline-flex items-center px-8 py-3 border border-green-400 text-green-400 rounded-lg hover:border-green-500 hover:text-green-500 group transition-all"
+            className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 rounded-lg hover:border-indigo-500 hover:text-indigo-600 group transition-all bg-white"
             whileHover={{
               y: -3,
-              backgroundColor: "rgba(34, 197, 94, 0.1)",
+              backgroundColor: "rgba(99, 102, 241, 0.05)",
             }}
           >
             <span>Let's discuss your project</span>
