@@ -16,10 +16,6 @@ const Projects = dynamic(() => import("@/components/Projects"), {
   loading: () => <div className="h-96 bg-gray-900 animate-pulse rounded-lg" />
 });
 
-const Testimonials = dynamic(() => import("@/components/Testimonials"), {
-  loading: () => <div className="h-96 bg-gray-900 animate-pulse rounded-lg" />
-});
-
 const Contact = dynamic(() => import("@/components/Contact"), {
   loading: () => <div className="h-96 bg-gray-900 animate-pulse rounded-lg" />
 });
@@ -38,8 +34,6 @@ export default function Home() {
       <TechStack />
       {/* Projects Section */}
       <Projects />
-      {/* Testimonials Section */}
-      <Testimonials />
       {/* Contact Section */}
       <Contact />
     </main>

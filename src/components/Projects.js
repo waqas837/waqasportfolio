@@ -168,7 +168,7 @@ const Projects = () => {
           mouseX.set(e.clientX - bounds.left);
           mouseY.set(e.clientY - bounds.top);
         }}
-        className="relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-50/50 backdrop-blur-sm shadow-2xl"
+        className="relative overflow-hidden rounded-2xl border border-gray-700 bg-gray-800 backdrop-blur-sm shadow-2xl"
       >
         {children}
         <motion.div
@@ -184,7 +184,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-32 px-6 lg:px-20 relative overflow-hidden bg-gray-50"
+      className="py-32 px-6 lg:px-20 relative overflow-hidden bg-gray-900"
     >
       {/* Background animation */}
       <motion.div
@@ -239,7 +239,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-4xl sm:text-5xl font-extrabold mb-4"
+            className="text-4xl sm:text-5xl font-extrabold mb-4 text-white"
           >
             Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Projects</span>
           </motion.h2>
@@ -284,21 +284,21 @@ const Projects = () => {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <motion.div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent opacity-90" />
+                  <motion.div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent opacity-90" />
                 </motion.div>
 
                 <div className="p-8">
-                  <motion.h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <motion.h3 className="text-2xl font-bold text-white mb-3">
                     {project.title}
                   </motion.h3>
-                  <motion.p className="text-gray-700 mb-6 leading-relaxed">
+                  <motion.p className="text-gray-300 mb-6 leading-relaxed">
                     {project.description}
                   </motion.p>
                   <div className="flex flex-wrap gap-2 mb-8">
                     {project.technologies.map((tech, techIndex) => (
                       <motion.span
                         key={techIndex}
-                        className="text-xs font-mono bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full border border-gray-200"
+                        className="text-xs font-mono bg-gray-700 text-gray-300 px-3 py-1.5 rounded-full border border-gray-600"
                       >
                         {tech}
                       </motion.span>
@@ -334,7 +334,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+          <h3 className="text-xl font-semibold text-white mb-4 text-center">
             All Projects
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -344,7 +344,7 @@ const Projects = () => {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-indigo-600 hover:text-indigo-700 border border-gray-300 rounded-md p-4 bg-white transition-all hover:border-indigo-500 hover:bg-indigo-50"
+                className="text-sm text-indigo-400 hover:text-indigo-300 border border-gray-600 rounded-md p-4 bg-gray-800 transition-all hover:border-indigo-500 hover:bg-gray-700/50"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
@@ -365,15 +365,15 @@ const Projects = () => {
           transition={{ delay: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.p className="text-gray-600 text-lg mb-6">
+          <motion.p className="text-gray-400 text-lg mb-6">
             Interested in seeing more of my work?
           </motion.p>
           <motion.a
             href="#contact"
-            className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 rounded-lg hover:border-indigo-500 hover:text-indigo-600 group transition-all bg-white"
+            className="inline-flex items-center px-8 py-3 border border-indigo-500 text-indigo-400 rounded-lg hover:border-indigo-400 hover:text-indigo-300 group transition-all bg-gray-800"
             whileHover={{
               y: -3,
-              backgroundColor: "rgba(99, 102, 241, 0.05)",
+              backgroundColor: "rgba(99, 102, 241, 0.1)",
             }}
           >
             <span>Let's discuss your project</span>
